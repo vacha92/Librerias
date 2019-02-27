@@ -5,6 +5,7 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
+import com.squareup.picasso.Picasso
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-
+        Picasso.get().load("https://pngimage.net/wp-content/uploads/2018/06/iori-yagami-png-6.png").into(iori)
         val palabras = listOf("Esta","es","mi","lista", "de", "palabras")
 
 
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
             uju.text = palabras.get(indice)
 
-            if (indice<palabras.size-1) {
+            if (indice<palabras.size-31) {
                 indice++
             }else {
                 indice = 0
